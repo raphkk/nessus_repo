@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # Copy the Nessus .deb package into the container
 # Replace the file name with the one you downloaded
-COPY Nessus-10.9.3-ubuntu1110_amd64.deb ~
+COPY Nessus-10.9.3-ubuntu1110_amd64.deb 
 
 
 # Install the Nessus package using gdebi to resolve dependencies
