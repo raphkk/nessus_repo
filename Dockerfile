@@ -1,5 +1,5 @@
 # Use the official Ubuntu image as the base. You can specify a version.
-FROM ubuntu:22.04
+FROM ubuntu:8.10
 
 
 # Set environment variables for non-interactive installation
@@ -16,15 +16,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # Copy the Nessus .deb package into the container
 # Replace the file name with the one you downloaded
-COPY Nessus-28.4.0-ubuntu1110_amd64.deb /tmp/
+COPY Nessus-10.9.3-ubuntu1110_amd64.deb /tmp/
 
 
 # Install the Nessus package using gdebi to resolve dependencies
-RUN gdebi -n /tmp/Nessus-<version number>-ubuntu1110_amd64.deb
+RUN gdebi -n /tmp/Nessus-10.9.3-ubuntu1110_amd64.deb
 
 
 # Remove the temporary Nessus package to keep the image size small
-RUN rm /tmp/Nessus-<version number>-ubuntu1110_amd64.deb
+RUN rm /tmp/Nessus-10.9.3-ubuntu1110_amd64.deb
 
 
 # Expose the default Nessus web interface port
