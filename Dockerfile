@@ -20,11 +20,11 @@ COPY Nessus-10.9.3-ubuntu1604_amd64.deb /tmp/
 
 
 # Install the Nessus package using gdebi to resolve dependencies
-RUN gdebi -n /tmp/Nessus-10.9.3-ubuntu1110_amd64.deb
+RUN gdebi -n /tmp/Nessus-10.9.3-ubuntu1604_amd64.deb
 
 
 # Remove the temporary Nessus package to keep the image size small
-RUN rm /tmp/Nessus-10.9.3-ubuntu1110_amd64.deb
+RUN rm /tmp/Nessus-10.9.3-ubuntu1604_amd64.deb
 
 
 # Expose the default Nessus web interface port
