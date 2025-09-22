@@ -1,5 +1,5 @@
 # Use the official Ubuntu image as the base. You can specify a version.
-FROM ubuntu:8.10
+FROM ubuntu:22.04
 
 
 # Set environment variables for non-interactive installation
