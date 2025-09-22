@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # Copy the Nessus .deb package into the container
 # Replace the file name with the one you downloaded
-COPY Nessus-19.13.3-ubuntu1110_amd64.deb /tmp/
+COPY Nessus-28.4.0-ubuntu1110_amd64.deb /tmp/
 
 
 # Install the Nessus package using gdebi to resolve dependencies
