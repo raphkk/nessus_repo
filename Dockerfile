@@ -31,4 +31,5 @@ RUN rm /tmp/Nessus-10.9.3-ubuntu1604_amd64.deb
 EXPOSE 8834
 
 # Start the Nessus daemon when the container launches
-CMD ["/bin/bash", "-c", "service nessusd start && tail -f /opt/nessus/var/nessus/logs/nessusd.messages"]
+CMD ["/opt/nessus/sbin/nessusd", "-f"]
+
